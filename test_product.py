@@ -1,4 +1,4 @@
-from product_rating import calculate_average_rating, product_status
+from product import calculate_average_rating, product_status
 
 def test_average_rating():
     ratings = [4, 5, 3, 4]
