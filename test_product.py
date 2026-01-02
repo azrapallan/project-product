@@ -1,4 +1,4 @@
-from product import avg, product_status
+from product import avg, status
 
 def test_average_rating():
     ratings = [4, 5, 3, 4]
@@ -14,12 +14,12 @@ def test_status_excellent():
 
 def test_status_good():
     avg = 3.8
-    assert product_status(avg) == "Good"
+    assert status(avg) == "Good"
 
 def test_status_average():
     avg = 2.9
-    assert product_status(avg) == "Average"
+    assert status(avg) == "Average"
 
 def test_status_poor():
     avg = 2.0
-    assert product_status(avg) == "Poor"
+    assert status(avg) == "Poor"
