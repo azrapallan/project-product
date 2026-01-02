@@ -1,12 +1,12 @@
-from product import calculate_average_rating, product_status
+from product import calculate_avg, product_status
 
 def test_average_rating():
     ratings = [4, 5, 3, 4]
-    assert calculate_average_rating(ratings) == 4.0
+    assert calculate_avg(ratings) == 4.0
 
 def test_average_empty():
     ratings = []
-    assert calculate_average_rating(ratings) == 0
+    assert calculate_avg(ratings) == 0
 
 def test_status_excellent():
     avg = 4.7
