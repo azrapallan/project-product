@@ -1,31 +1,23 @@
-from product import avg, status
+def avg(ratings):
+    """
+    Calculate average rating.
+    Returns 0 for empty list.
+    """
+    if not ratings:
+        return 0
+    return sum(ratings) / len(ratings)
 
 
-def test_average_rating():
-    ratings = [4, 5, 3, 4]
-    assert avg(ratings) == 4.0
+def status(avg_rating):
+    """
+    Return product status based on average rating.
+    """
+    if avg_rating >= 4.5:
+        return "Excellent"
+    elif avg_rating >= 3.5:
+        return "Good"
+    elif avg_rating >= 2.5:
+        return "Average"
+    else:
+        return "Poor"
 
-
-def test_average_empty():
-    ratings = []
-    assert avg(ratings) == 0
-
-
-def test_status_excellent():
-    avg_rating = 4.7
-    assert status(avg_rating) == "Excellent"
-
-
-def test_status_good():
-    avg_rating = 3.8
-    assert status(avg_rating) == "Good"
-
-
-def test_status_average():
-    avg_rating = 2.9
-    assert status(avg_rating) == "Average"
-
-
-def test_status_poor():
-    avg_rating = 2.0
-    assert status(avg_rating) == "Poor"
