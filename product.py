@@ -16,7 +16,6 @@ def status(avg_rating):
 
 
 if __name__ == "__main__":
-    # OPTIONAL: only runs when executed directly, NOT during pytest
     ratings = [4, 5, 3, 4.5]
     average = avg(ratings)
     print("Average Rating:", average)
